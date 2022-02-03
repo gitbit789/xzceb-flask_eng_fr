@@ -1,18 +1,37 @@
-"""Language Translator Test Module"""
 import unittest
-from translator import english_to_french, french_to_english
+from translator import englishToFrench,frenchToEnglish
 
-class Testenglishtofrench(unittest.TestCase):
-    """Testenglishtofrench"""
+class TestEnglishToFrench(unittest.TestCase):
+    """
+    Unit test for English To French translator
+    """
     def test1(self):
-        """test1"""
-        self.assertEqual(english_to_french('0'), '0')
-        self.assertEqual(english_to_french('Hello'), 'Bonjour')
+        """
+        Test Hello to Bonjour
+        """
+        self.assertEqual(englishToFrench("Hello"), "Bonjour")
 
-class Testfrenchtoenglish(unittest.TestCase):
-    """Testfreshtoenglish"""
     def test2(self):
-        """test2"""
-        self.assertEqual(french_to_english('0'), '0')
-        self.assertEqual(french_to_english('Bonjour'), 'Hello')
+        """
+        Test Null string
+        """
+        self.assertNotEqual(englishToFrench(""), "Bonjour")
+
+class TestFrenchToEnglish(unittest.TestCase):
+    """
+    Unit test for French to English translator
+    """
+    def test1(self):
+        """
+        Test Bonjour to Hello
+        """
+        self.assertEqual(frenchToEnglish("Bonjour"), "Hello")
+
+    def test2(self):
+        """
+        Test Null input
+        """
+        self.assertNotEqual(frenchToEnglish(""), "Hello")
+
+unittest.main(verbosity=3)
         
