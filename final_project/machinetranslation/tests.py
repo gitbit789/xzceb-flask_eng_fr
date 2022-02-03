@@ -13,7 +13,7 @@ class TestEnglishToFrench(unittest.TestCase):
 
     def test2(self):
         """
-        Test Null string
+        Test null 
         """
         self.assertNotEqual(englishToFrench(""), "Bonjour")
 
@@ -29,7 +29,7 @@ class TestFrenchToEnglish(unittest.TestCase):
 
     def test2(self):
         """
-        Test Null input
+        Test null
         """
         self.assertNotEqual(frenchToEnglish(""), "Hello")
 
